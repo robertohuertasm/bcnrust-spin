@@ -1,8 +1,8 @@
 # Spin your Rust
-<center>
+<p align="center">
 <image src="front/public/ferris.png" width="100">
 <image src="front/public/fermyon.png" width="180">
-</center>
+</p>
 
 This is a project to showcase [Fermyon Spin](https://www.fermyon.com/spin) for a BcnRust talk.
 
