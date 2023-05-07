@@ -32,7 +32,7 @@
     const user = { name: userName, email: userEmail };
     const newUser = await api.createUser(user);
     if (newUser) {
-      users = [...users, newUser].sort((a, b) => a.name.localeCompare(b.name));
+      users = await api.getUsers();
     }
   }
 
