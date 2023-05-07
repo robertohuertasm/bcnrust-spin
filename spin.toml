@@ -1,0 +1,30 @@
+spin_manifest_version = "1"
+authors = ["Roberto Huertas <roberto.huertas@outlook.com>"]
+description = ""
+name = "bcnrust-spin"
+trigger = { type = "http", base = "/" }
+version = "0.1.0"
+
+[[component]]
+id = "api"
+source = "api/target/wasm32-wasi/release/api.wasm"
+allowed_http_hosts = []
+key_value_stores = ["default"]
+[component.trigger]
+route = "/api/v1/..."
+# route = "/..."
+[component.build]
+command = "cargo build --target wasm32-wasi --release"
+workdir = "api"
+watch = ["src/**/*.rs", "Cargo.toml"]
+
+[[component]]
+source = { url = "https://github.com/fermyon/spin-fileserver/releases/download/v0.0.2/spin_static_fs.wasm", digest = "sha256:65456bf4e84cf81b62075e761b2b0afaffaef2d0aeda521b245150f76b96421b" }
+id = "front"
+files = [ { source = "front/dist", destination = "/" } ]
+[component.trigger]
+route = "/..."
+[component.build]
+command = "npm run build"
+workdir = "front"
+watch = ["src/**/*.ts", "src/**/*.svelte", "src/**/*.css", "package.json"]
