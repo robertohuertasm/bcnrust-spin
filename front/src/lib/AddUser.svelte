@@ -32,19 +32,95 @@
     const user = { name: userName, email: userEmail };
     const newUser = await api.createUser(user);
     if (newUser) {
-      users = [...users, newUser];
+      users = [...users, newUser].sort((a, b) => a.name.localeCompare(b.name));
+    }
+  }
+
+  function controlEnter(event) {
+    console.log(event.key);
+    if (event.key === 'Enter') {
+      createUser();
     }
   }
 </script>
 
-<input type="text" bind:value={userName} placeholder="Enter a name" id="name" />
-<input
-  type="text"
-  bind:value={userEmail}
-  placeholder="Enter an email"
-  id="email"
-/>
+<div class="container">
+  <div>
+    <input
+      type="text"
+      bind:value={userName}
+      placeholder="Enter a name"
+      id="name"
+    />
+    <input
+      type="text"
+      bind:value={userEmail}
+      on:click={controlEnter}
+      placeholder="Enter an email"
+      id="email"
+    />
+  </div>
+  <div class="buttons">
+    <button class="winner" on:click={getWinner}> Get Winner </button>
+    <button on:click={refreshUsers}> Refresh Users </button>
+    <button class="create" on:click={createUser} disabled={!isValid}>
+      + Add User
+    </button>
+  </div>
+</div>
+<hr />
 
-<button on:click={createUser} disabled={!isValid}> + Add User </button>
-<button on:click={refreshUsers}> Refresh Users </button>
-<button on:click={getWinner}> Get Winner </button>
+<style>
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    margin: 0;
+  }
+
+  .buttons {
+    margin-left: auto;
+  }
+  input {
+    padding: 0.8em;
+    margin: 0 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 0.25em;
+  }
+  button {
+    margin: 0 0.4em;
+    /* margin-left: auto; */
+    align-self: flex-end;
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 0.25em;
+    background: #fff;
+    cursor: pointer;
+    float: right;
+  }
+  button:disabled {
+    cursor: not-allowed;
+    color: #ccc;
+  }
+  button:hover {
+    filter: drop-shadow(0 0 2em #d20303aa);
+    background-color: #d20303aa;
+    color: white;
+  }
+  button.winner:hover {
+    filter: drop-shadow(0 0 2em #d6b406aa);
+    background-color: #d6b406aa;
+    color: white;
+  }
+  button.create:hover {
+    filter: drop-shadow(0 0 2em #066ed6aa);
+    background-color: #066ed6aa;
+    color: white;
+  }
+  button:disabled:hover {
+    filter: none;
+    background-color: white;
+    color: #ccc;
+  }
+</style>

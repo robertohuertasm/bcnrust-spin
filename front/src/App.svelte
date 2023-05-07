@@ -1,6 +1,5 @@
 <script lang="ts">
-  import svelteLogo from './assets/svelte.svg';
-  import viteLogo from '/vite.svg';
+  import ferrisLogo from '/ferris.png';
   import AddUser from './lib/AddUser.svelte';
   import User from './lib/User.svelte';
   import { onMount } from 'svelte';
@@ -21,29 +20,35 @@
 
 <main>
   <div>
-    <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
+    <!-- <a
+      href="https://https://www.rust-lang.org/"
+      target="_blank"
+      rel="noreferrer"
+    >
       <img src={viteLogo} class="logo" alt="Vite Logo" />
-    </a>
-    <a href="https://svelte.dev" target="_blank" rel="noreferrer">
-      <img src={svelteLogo} class="logo svelte" alt="Svelte Logo" />
+    </a> -->
+    <a
+      href="https://https://www.rust-lang.org/"
+      target="_blank"
+      rel="noreferrer"
+    >
+      <img src={ferrisLogo} class="logo svelte" alt="Svelte Logo" />
     </a>
   </div>
-  <h1>Vite + Svelte</h1>
+  <h1>Win your Ferris!</h1>
 
   <AddUser bind:users on:winner={handleWinner} />
 
-  {#each users as user (user.email)}
-    <ul>
-      {#if winner && winner.email === user.email}
-        <li>Winner!! <strong><User {user} /></strong></li>
-      {:else}
-        <li><User {user} /></li>
-      {/if}
-    </ul>
-  {:else}
-    <!-- this block renders when users.length === 0 -->
-    <p>No users available</p>
-  {/each}
+  <ul>
+    {#each users as user (user.email)}
+      <li class:winner={winner && winner.email === user.email}>
+        <User {user} />
+      </li>
+    {:else}
+      <!-- this block renders when users.length === 0 -->
+      <li>No users available</li>
+    {/each}
+  </ul>
 </main>
 
 <style>
@@ -58,5 +63,22 @@
   }
   .logo.svelte:hover {
     filter: drop-shadow(0 0 2em #ff3e00aa);
+  }
+  .winner {
+    background-color: #ffff00ec;
+    filter: drop-shadow(0 0 1em #eeea24aa);
+    color: #81371bf2;
+  }
+  ul {
+    list-style-type: none;
+    margin: auto;
+    display: block;
+  }
+  li {
+    margin: 5px;
+    padding: 5px;
+    float: left;
+    min-width: 22%;
+    border: 1px solid #ccc;
   }
 </style>

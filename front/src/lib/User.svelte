@@ -3,4 +3,14 @@
   export let user: UserModel;
 </script>
 
-<div><b>{user.email}</b>: {user.email}</div>
+<div>
+  <p><b>{user.name}</b></p>
+  <p>{user.email}</p>
+</div>
+
+<style>
+  p {
+    margin: 0;
+    line-height: 30px;
+  }
+</style>
