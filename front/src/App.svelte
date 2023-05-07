@@ -1,5 +1,6 @@
 <script lang="ts">
   import ferrisLogo from '/ferris.png';
+  import fermyonLogo from '/fermyon.png';
   import AddUser from './lib/AddUser.svelte';
   import User from './lib/User.svelte';
   import { onMount } from 'svelte';
@@ -20,19 +21,15 @@
 
 <main>
   <div>
-    <!-- <a
-      href="https://https://www.rust-lang.org/"
-      target="_blank"
-      rel="noreferrer"
-    >
-      <img src={viteLogo} class="logo" alt="Vite Logo" />
-    </a> -->
     <a
       href="https://https://www.rust-lang.org/"
       target="_blank"
       rel="noreferrer"
     >
-      <img src={ferrisLogo} class="logo svelte" alt="Svelte Logo" />
+      <img src={ferrisLogo} class="logo svelte" alt="Ferris Logo" />
+    </a>
+    <a href="https://www.fermyon.com" target="_blank" rel="noreferrer">
+      <img src={fermyonLogo} class="logo" alt="Fermyon Logo" />
     </a>
   </div>
   <h1>Win your Ferris!</h1>
