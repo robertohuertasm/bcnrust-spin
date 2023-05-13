@@ -1,7 +1,7 @@
 import type { UserModel } from './userModel';
 
-let url = 'https://bcnrust-spin.fermyon.app/api/v1/users';
-// let url = 'http://localhost:3000/api/v1/users';
+// let url = 'https://bcnrust-spin.fermyon.app/api/v1/users';
+let url = '/api/v1/users';
 
 export async function getUsers(): Promise<UserModel[]> {
   try {

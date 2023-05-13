@@ -47,7 +47,7 @@ fn handle_get_root(_req: Request, _params: Params) -> Result<Response> {
     Ok(http::Response::builder()
         .status(200)
         .header("Access-Control-Allow-Origin", "*")
-        .body(Some("API v1 is working nicely".into()))?)
+        .body(Some("API v1.1 is working nicely".into()))?)
 }
 
 fn handle_get_users(_req: Request, _params: Params) -> Result<Response> {
