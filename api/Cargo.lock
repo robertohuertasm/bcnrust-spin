@@ -268,7 +268,7 @@ dependencies = [
 [[package]]
 name = "spin-macro"
 version = "0.1.0"
-source = "git+https://github.com/fermyon/spin?tag=v1.1.0#28655d57fa3aecfc36f8ff4e14d8390d1a18b350"
+source = "git+https://github.com/fermyon/spin?tag=v1.2.1#fbc3874ee2320389e78b7661f4412201d8cb718a"
 dependencies = [
  "anyhow",
  "bytes",
@@ -276,13 +276,12 @@ dependencies = [
  "proc-macro2",
  "quote",
  "syn 1.0.109",
- "wit-bindgen-rust",
 ]
 
 [[package]]
 name = "spin-sdk"
-version = "1.1.0"
-source = "git+https://github.com/fermyon/spin?tag=v1.1.0#28655d57fa3aecfc36f8ff4e14d8390d1a18b350"
+version = "1.2.1"
+source = "git+https://github.com/fermyon/spin?tag=v1.2.1#fbc3874ee2320389e78b7661f4412201d8cb718a"
 dependencies = [
  "anyhow",
  "bytes",
