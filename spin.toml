@@ -12,7 +12,6 @@ allowed_http_hosts = []
 key_value_stores = ["default"]
 [component.trigger]
 route = "/api/v1/..."
-# route = "/..."
 [component.build]
 command = "cargo build --target wasm32-wasi --release"
 workdir = "api"
