@@ -10,7 +10,7 @@ It contains both a backend, with CORS support, built with [Spin](https://www.fer
 
 The main goal of this repo is to showcase how easy it is to get started with [Fermyon Spin](https://www.fermyon.com/spin) and how powerful it is to create serverless WebAssembly apps. You can use your favorite language and connect your app to various data services, such as Redis, PostgreSQL, and more.
 
-In this project, I will show you how to create a simple app [Svelte](https://svelte.dev/) and [TypeScript](https://www.typescriptlang.org/), and how to deploy it to the Fermyon Cloud with just a few commands. You will also learn how to use Spin triggers, templates, and components to simplify your development process.
+In this project, I will show you how to create a simple [Svelte](https://svelte.dev/) and [TypeScript](https://www.typescriptlang.org/) app, and how to deploy it to the Fermyon Cloud with just a few commands. You will also learn how to use Spin triggers, templates, and components to simplify your development process.
 
 If you are interested in learning more about [Fermyon Spin](https://www.fermyon.com/spin), you can check out their [website](https://www.fermyon.com/spin), their [GitHub repo](https://github.com/fermyon/spin), or their [blog](https://www.fermyon.com/blog/index). You can also join their [Discord server](https://discord.gg/AAFNfS7NGf) or follow them on [Twitter](https://twitter.com/spinframework) for updates and support.
 
