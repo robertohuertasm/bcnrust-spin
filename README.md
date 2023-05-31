@@ -15,3 +15,7 @@ In this project, I will show you how to create a simple [Svelte](https://svelte.
 If you are interested in learning more about [Fermyon Spin](https://www.fermyon.com/spin), you can check out their [website](https://www.fermyon.com/spin), their [GitHub repo](https://github.com/fermyon/spin), or their [blog](https://www.fermyon.com/blog/index). You can also join their [Discord server](https://discord.gg/AAFNfS7NGf) or follow them on [Twitter](https://twitter.com/spinframework) for updates and support.
 
 I hope you enjoy this project and find it useful. If you have any feedback or questions, feel free to open an issue or a pull request. Happy coding!
+
+## Slides
+
+This project was used for the [10th BcnRust Meetup](https://youtu.be/AsHW17pD17o) and you can find the slides [here](/spin.pptx).
